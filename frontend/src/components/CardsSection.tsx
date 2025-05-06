@@ -4,7 +4,7 @@ import Card from './Card'
 const CardsSection = ({ document }: any) => {
     return (
         <>
-            {document && !(document.length == null) ?
+            {document && !(document.length == 0) ?
                 <div className='grid grid-cols-5 p-20 gap-4 justify-center'>
                     {console.log(document)}
                     {document.map((doc: any) => {
