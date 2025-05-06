@@ -33,13 +33,15 @@ const App = () => {
 
   const url = searchTerm ? api + `search?fileName=${searchTerm}` : api + 'get-documents'
   useEffect(() => {
+    console.log(url)
     axios
       .get(url)
       .then((response) => {
         setDocument(response.data);
       })
       .catch((err) => console.error(err));
-  }, []);
+    console.log(searchTerm);
+  }, [searchTerm]);
   return (
     <>
       <nav className='flex justify-between p-10 px-20 '>
